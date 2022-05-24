@@ -1,3 +1,1 @@
-wave.do output
-
-![image](https://user-images.githubusercontent.com/61377755/170129312-baa2bef9-af78-4a00-ae54-cdcbeb1e5fdb.png)
+![image](https://user-images.githubusercontent.com/61377755/170133537-4265448e-63c6-4db8-bece-4094e16a9670.png)
