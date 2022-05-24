@@ -22,7 +22,7 @@ assign sclk = clk; // sclk to be sent to external flash memory
 
 reg transmit = 0; // To allow transmitting of bits
 
-integer maxCount = 0; // Counter that indicates transfer is complete when max is reached i.e. 2
+integer maxCount = 0; // Counter that indicates transfer is complete when max is reached i.e. 5
 
 always @(posedge start or posedge reset) begin // Reset - Start
 if (!transmit && start) begin
@@ -57,7 +57,7 @@ if (transmit) begin
 end
 
 always @(negedge clk) begin // Sampling
-	if (maxCount >= 2) begin // Max count reached (All bits transferred)
+	if (maxCount >= 5) begin // Max count reached (All bits transferred)
 	transmit <= 0; // Disallow transmission
 	CS <= 1'b1; // Unselect slave
 	end
