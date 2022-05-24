@@ -54,7 +54,17 @@ initial begin
 	CS=0;
 	#2 start=0;
 
-	for (int i=0;i<20;i++) begin
+	for (int i=0;i<16;i++) begin
+		#1;
+	end
+
+	masterDataToSend = 8'h22;
+	slaveDataToSend = 8'h33;
+	start = 1;
+	CS=0; //because my chip select was disabled
+	#2 start=0;
+	
+	for (int i=0;i<16;i++) begin
 		#1;
 	end
 
