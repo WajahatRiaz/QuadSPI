@@ -39,22 +39,22 @@ end
 
 always @(posedge sclk) begin// Shifting
 if (flag) begin
-	Register <= Register >> 4; // Shift
-	MISO_0<= Register[0]; // Write to MISO 0
-	MISO_1<= Register[1]; // Write to MISO 1
-	MISO_2<= Register[2]; // Write to MISO 2
-	MISO_3<= Register[3]; // Write to MISO 3
+	Register <= Register<<4; // Shift
+	MISO_0<= Register[4]; // Write to MISO 0
+	MISO_1<= Register[5]; // Write to MISO 1
+	MISO_2<= Register[6]; // Write to MISO 2
+	MISO_3<= Register[7]; // Write to MISO 3
 	end
 end
 
 always @ (negedge sclk) begin// Sampling
 if (flag) begin
-	Register[7] = MOSI_0; // Read from MOSI 0
-	Register[6] = MOSI_1; // Read from MOSI 1
-	Register[5] = MOSI_2; // Read from MOSI 2
-	Register[4] = MOSI_3; // Read from MOSI 3
+	Register[0] = MOSI_0; // Read from MOSI 0
+	Register[1] = MOSI_1; // Read from MOSI 1
+	Register[2] = MOSI_2; // Read from MOSI 2
+	Register[3] = MOSI_3; // Read from MOSI 3
 
-	slaveDataReceived <= {MOSI_3,MOSI_2,MOSI_1,MOSI_0, slaveDataReceived[7:4]}; // Update Data received from master
+	slaveDataReceived <= {slaveDataReceived[3:0],MOSI_3,MOSI_2,MOSI_1,MOSI_0}; // Update Data received from master
 	end
 end
 
