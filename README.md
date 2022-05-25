@@ -55,7 +55,7 @@ To eliminate the problems discussed above, the Quad-SPI protocol was made.
 
 Some of the key advantages of the protocol are listed in the table below:
 
-|   ###Benefits                               |    ###Comments                                                                                                              |
+|   **Benefits**                               |    **Comments**                                                                                                              |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 |     Low pin-count                                 |     Saves GPIOs to be used for other   purposes. Can support single, dual, and quad memories.                                  |
 |     Easier PCB design                             |     Allows easier and faster PCB   design thanks to a reduced pin count.                                                       |
