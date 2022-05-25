@@ -47,11 +47,11 @@ end
 
 always @(posedge clk) begin // Shifting
 if (transmit) begin
-	Register <= Register >> 4; // Shift 4 times 
-	MOSI_0 <= Register[0]; // Write to MOSI 0
-	MOSI_1 <= Register[1]; // Write to MOSI 1
-	MOSI_2 <= Register[2]; // Write to MOSI 2
-	MOSI_3 <= Register[3]; // Write to MOSI 3
+	Register <= Register << 4; // Shift 4 times 
+	MOSI_0 <= Register[4]; // Write to MOSI 0
+	MOSI_1 <= Register[5]; // Write to MOSI 1
+	MOSI_2 <= Register[6]; // Write to MOSI 2
+	MOSI_3 <= Register[7]; // Write to MOSI 3
 
 	end
 end
@@ -63,12 +63,12 @@ always @(negedge clk) begin // Sampling
 	end
 
 if (transmit) begin
-	Register[7] <= MISO_0; // Read from MISO 0
-	Register[6] <= MISO_1; // Read from MISO 1
-	Register[5] <= MISO_2; // Read from MISO 2
-	Register[4] <= MISO_3; // Read from MISO 3
+	Register[0] <= MISO_0; // Read from MISO 0
+	Register[1] <= MISO_1; // Read from MISO 1
+	Register[2] <= MISO_2; // Read from MISO 2
+	Register[3] <= MISO_3; // Read from MISO 3
 
-	masterDataReceived <= {MISO_3,MISO_2,MISO_1,MISO_0, masterDataReceived[7:4]}; // Update Data Received from slave
+	masterDataReceived <= {masterDataReceived[3:0],MISO_3,MISO_2,MISO_1,MISO_0}; // Update Data Received from slave
 	maxCount <= maxCount + 1; // Increment counter
 	end
 end
