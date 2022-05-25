@@ -11,7 +11,7 @@ Serial peripheral interface (SPI) is one of the most widely used interfaces betw
 
 
 <p align="center">
-  <img width="350" height="175" src="https://user-images.githubusercontent.com/61377755/170161358-c2070f70-a755-40cc-8ddf-a0777aad06f7.png">
+  <img width="400" height="210" src="https://user-images.githubusercontent.com/61377755/170161358-c2070f70-a755-40cc-8ddf-a0777aad06f7.png">
 </p>
 
 
