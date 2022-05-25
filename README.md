@@ -1,11 +1,11 @@
-# Quad Serial Peripheral Interface (Quad-SPI)
+**# Quad Serial Peripheral Interface (Quad-SPI)**
 
 
-##Introduction:
+**Introduction:**
 
 A microcontroller can send multiple bits to a peripheral device by using multiple wires or by sending multiple bits in series over a single wire. The former is called parallel I/O and the latter is called serial I/O. Serial I/O is popular, especially when pins are limited because it uses few wires and is fast enough for many applications. Indeed, it is so popular that many standards for serial I/O have been established and microcontrollers offer dedicated hardware to easily send data via these standards. Some of the commonly found standards include an inter-integrated circuit (I2C), universal serial bus (USB), etc. This report introduces Quad Serial Peripheral Interface and implementations in SystemVerilog. 
 
-##Serial Peripheral Interface (SPI):
+**Serial Peripheral Interface (SPI):**
 
 Serial peripheral interface (SPI) is one of the most widely used interfaces between the microcontroller and peripheral ICs such as sensors, ADCs, DACs, shift registers, SRAM, and others. SPI is a synchronous, full-duplex master-slave-based interface. The data from the master or the slave is synchronized on the rising or falling clock edge of the clock. Both master and slave can transmit data at the same time. The SPI has a 1-bit data bus as shown below:
 
