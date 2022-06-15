@@ -11,7 +11,7 @@ Similarly, the data we want to send to the master from the slave is 8’hDE stor
 
 ![image](https://user-images.githubusercontent.com/61377755/170163172-2b6c8d2a-798f-4003-88e2-40af750ee7a5.png)
 
-We know that initially, we want to send 8’hAB from master to slave, and similarly, we want to send 8’hDE from slave to the master. You can see in the figures below that the received data in both slave and master are an exact match of the data we sent.
+We know that initially, we want to send 8’hAB from master to slave, and similarly, we want to send 8’hDE from slave to the master. You can see in the figures below that the received data in both slave and master are an exact match of the data we sent. The arrows point that we have exchanged data multiple times and we get the same results.
 
 ![image](https://user-images.githubusercontent.com/61377755/170163202-563e37ad-f65a-48dc-9d45-844fbab671f7.png)
 ![image](https://user-images.githubusercontent.com/61377755/170163215-44a687d1-abdf-4796-9361-913508ba2c85.png)
