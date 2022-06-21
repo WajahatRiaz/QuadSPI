@@ -1,11 +1,11 @@
 # **Quad Serial Peripheral Interface (Quad-SPI)**
 
 
-##**Introduction:**
+## **Introduction:**
 
 A microcontroller can send multiple bits to a peripheral device by using multiple wires or by sending multiple bits in series over a single wire. The former is called parallel I/O and the latter is called serial I/O. Serial I/O is popular, especially when pins are limited because it uses few wires and is fast enough for many applications. Indeed, it is so popular that many standards for serial I/O have been established and microcontrollers offer dedicated hardware to easily send data via these standards. Some of the commonly found standards include an inter-integrated circuit (I2C), universal serial bus (USB), etc. This report introduces Quad Serial Peripheral Interface and implementations in SystemVerilog. 
 
-**Serial Peripheral Interface (SPI):**
+## **Serial Peripheral Interface (SPI):**
 
 Serial peripheral interface (SPI) is one of the most widely used interfaces between the microcontroller and peripheral ICs such as sensors, ADCs, DACs, shift registers, SRAM, and others. SPI is a synchronous, full-duplex master-slave-based interface. The data from the master or the slave is synchronized on the rising or falling clock edge of the clock. Both master and slave can transmit data at the same time. The SPI has a 1-bit data bus as shown below:
 
@@ -26,7 +26,7 @@ A waveform of SPI protocol is given below:
  
 ![image](https://user-images.githubusercontent.com/61377755/170161683-f5270f07-d351-4ffd-96f3-64c608d43f18.png)
 
-**Quad Serial Peripheral Interface (Quad-SPI):**
+## **Quad Serial Peripheral Interface (Quad-SPI):**
 
 Quad-SPI, also known as QSPI is the extension of the traditional Serial Peripheral Interface (SPI) protocol. is a peripheral that can be found in most modern microcontrollers This serial interface allows the communication on four data lines between a master (for example AHB, AXI, Wishbone, etc) and an external flash memory that supports this interface. It is especially useful in applications that involve a lot of memory-intensive data like multimedia where on-chip memory is not enough. A block diagram along with its characteristic waveform is given below:
 
@@ -37,13 +37,13 @@ Quad-SPI, also known as QSPI is the extension of the traditional Serial Peripher
 
 The reason why we require a Quad-SPI protocol can be deduced from the following debate:
 
-**Why did the engineers come up with yet another protocol? Wasn’t SPI enough for all applications?**
+## **Why did the engineers come up with yet another protocol? Wasn’t SPI enough for all applications?**
 SPI was enough for most of the use cases like reading data from sensors and sending data to actuators or output devices and is still one of the most preferred protocols for on-chip serial communication but engineers struggled with one important problem, which is adding more memory to their embedded devices.
 
-**What is the problem with flash memory, that makes it need a special interface?**
+## **What is the problem with flash memory, that makes it need a special interface?**
 Flash memory is cheap and durable which makes it an attractive option for embedded applications. But it is slow by nature and this will create a bottleneck and impact the performance of embedded applications. Even though SPI is fast, the flash devices were not able to send out data at this rate through a single data line to make it work as fast as the on-chip memory.
 
-**What solution did we use before quad SPI?**
+## **What solution did we use before quad SPI?**
 Earlier before quad-SPI came, the solution was to use parallel memory where 8, 16 or 32 pins (depending on the address range) can be used to connect the external memory device with the microcontroller to achieve fast performance. But this approach had two major disadvantages:
 
 1) It made the PCB design complicated.
@@ -51,7 +51,7 @@ Earlier before quad-SPI came, the solution was to use parallel memory where 8, 1
 
 To eliminate the problems discussed above, the Quad-SPI protocol was made.
 
-**Advantages of using Quad-SPI:**
+## **Advantages of using Quad-SPI:**
 
 Some of the key advantages of the protocol are listed in the table below:
 
