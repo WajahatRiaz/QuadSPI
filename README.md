@@ -1,4 +1,4 @@
- **Quad Serial Peripheral Interface (Quad-SPI)**
+# **Quad Serial Peripheral Interface (Quad-SPI)**
 
 
 **Introduction:**
