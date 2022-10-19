@@ -1,5 +1,4 @@
-<img width="50" alt="circuitascasdc" src="https://user-images.githubusercontent.com/61377755/196786742-8ba605d4-0700-476c-b145-688edaf3fd33.png">
- ## **Quad Serial Peripheral Interface (Quad-SPI)**
+## **Quad Serial Peripheral Interface (Quad-SPI)**
 
 
 ## **Introduction:**
