@@ -1,5 +1,5 @@
 ## **Quad Serial Peripheral Interface (Quad-SPI)**
-
+<a target="_blank" href="https://icons8.com/icon/xLrgPqIusa5p/circuit">Circuit</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 ## **Introduction:**
 
