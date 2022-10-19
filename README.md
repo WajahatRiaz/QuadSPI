@@ -1,4 +1,4 @@
-# **Quad Serial Peripheral Interface (Quad-SPI)**
+![circuit](https://user-images.githubusercontent.com/61377755/196786490-f7aad59b-30a0-4834-b570-882c48bc7058.png) # **Quad Serial Peripheral Interface (Quad-SPI)**
 
 
 ## **Introduction:**
