@@ -1,4 +1,5 @@
-![circuit](https://user-images.githubusercontent.com/61377755/196786490-f7aad59b-30a0-4834-b570-882c48bc7058.png) # **Quad Serial Peripheral Interface (Quad-SPI)**
+<img width="50" alt="circuitascasdc" src="https://user-images.githubusercontent.com/61377755/196786742-8ba605d4-0700-476c-b145-688edaf3fd33.png">
+ ## **Quad Serial Peripheral Interface (Quad-SPI)**
 
 
 ## **Introduction:**
